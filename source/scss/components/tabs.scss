@@ -1,0 +1,77 @@
+/* Component: tabs */
+
+/* select */
+.cv-tabs-select {
+  color: var(--text);
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.cv-tabs-select button {
+  background: transparent;
+  font-size: var(--size-btn);
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 0 16px;
+  line-height: 42px;
+  border: 0;
+  margin: 0;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+
+.cv-tabs-select button:not(:last-child) {margin-right: 8px;}
+
+.cv-tabs-select button:hover {
+  background: var(--light);
+}
+
+.cv-tabs-select button.is-selected {
+  background: rgba(var(--color-rgb), .3);
+  color: var(--color);
+}
+
+.cv-tabs-select button.is-selected:active {
+  background: rgba(var(--color-rgb), .5);
+}
+
+/* body */
+.cv-tabs-body {
+  padding: 16px;
+}
+
+/* items */
+.cv-tabs-item {
+  display: none;
+}
+
+.cv-tabs-item.is-selected {
+  display: block;
+}
+
+/* fix button */
+
+/* vertical */
+@media screen and (min-width: $md) {
+  .cv-tabs.is-vertical {
+    display: flex;
+  }
+  
+  .cv-tabs.is-vertical .cv-tabs-select {
+    flex-direction: column;
+    flex-wrap: initial;
+    overflow: initial;
+  }
+  
+  .cv-tabs.is-vertical .cv-tabs-select button {
+    width: 100%;
+    text-align: left;
+  }
+
+  .cv-tabs.is-vertical .cv-tabs-select button:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+}

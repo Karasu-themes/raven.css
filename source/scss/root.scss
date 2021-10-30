@@ -1,0 +1,22 @@
+:root {
+  --font-base: #{$fontbase};
+  --font-logo: #{$fontlogo};
+  --font-head: #{$fonthead};
+  --color: #{$color};
+  --color-rgb: #{getRGB($color)};
+  --text: #{$text};
+  --text-rgb: #{getRGB($text)};
+  --light: #{$light};
+  --light-rgb: #{getRGB($light)};
+  --container: #{$container};
+  --body: #{$body};
+  --size-h1: #{$sizeh1};
+  --size-h2: #{$sizeh2};
+  --size-h3: #{$sizeh3};
+  --size-h4: #{$sizeh4};
+  --size-h5: #{$sizeh5};
+  --size-h6: #{$sizeh6};
+  --size-base: #{$sizebase};
+  --size-btn: #{$sizebtn};
+  --size-sub: #{$sizesub};
+}

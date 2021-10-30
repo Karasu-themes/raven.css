@@ -1,0 +1,15 @@
+/* Component: alerts */
+[class*="alert"] {
+  background: rgba(var(--light-rgb), .3);
+  color: var(--text);
+  font-weight: 500;
+  padding: 16px;
+  font-size: var(--size-btn);
+  border-left: 3px solid var(--light);
+}
+
+.alert-color {
+  background: rgba(var(--color-rgb), .1);
+  color: var(--color);
+  border-left: 3px solid var(--color);
+}

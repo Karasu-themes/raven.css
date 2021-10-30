@@ -1,0 +1,17 @@
+// layout
+$layout-container: 1200px !default;
+$layout-sidebar: 320px !default;
+
+// Breakpoints
+$breakpoint: (
+	"xs": 480px,
+	"sm": 576px,
+	"md": 768px,
+	"lg": 992px,
+	"xlg": 1200px) !default;
+
+$xs: map-get($breakpoint, "xs");
+$sm: map-get($breakpoint, "sm");
+$md: map-get($breakpoint, "md");
+$lg: map-get($breakpoint, "lg");
+$xlg: map-get($breakpoint, "xlg");

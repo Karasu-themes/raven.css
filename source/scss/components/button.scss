@@ -1,0 +1,63 @@
+/* Component: button */
+[class*="cv-btn"] {
+  background: var(--light);
+  font-size: var(--size-btn);
+  color: var(--text);
+  font-weight: 500;
+  padding: 0 16px;
+  line-height: 42px;
+  display: inline-block;
+  border-radius: 4px;
+  margin-right: 4px;
+  margin-bottom: 8px;
+  outline: 0;
+  border: 0;
+  transition: all .2s;
+}
+
+[class*="cv-btn"][href]:hover,
+button[class*="cv-btn"]:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.cv-btn:focus {
+  outline: solid 2px var(--text);
+}
+
+/* Button colors */
+.cv-btn-color,
+.cv-btn-badge-color {
+  background: var(--color);
+  color: #fff;
+}
+
+.cv-btn-clean,
+.cv-btn-badge-clean {
+  background: transparent;
+  color: var(--text);
+}
+
+/* Button badge */
+[class*="cv-btn-badge"] {
+  padding: 4px 6px;
+  font-weight: 700;
+  line-height: normal;
+  font-size: var(--size-sub)
+}
+
+/* Button icon */
+[class*="cv-btn"] .ico,
+[class*="cv-btn-badge"] .ico {
+  margin-right: 8px;
+  /* display: inline-block;
+  vertical-align: middle; */
+}
+
+[class*="cv-btn"] .ico {
+  font-size: var(--size-base);
+}
+
+[class*="cv-btn-badge"] .ico {
+  font-size: var(--size-btn);
+}
