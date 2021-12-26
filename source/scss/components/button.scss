@@ -12,7 +12,7 @@
   margin-bottom: 8px;
   outline: 0;
   border: 0;
-  transition: all .2s;
+  transition: opacity .2s;
 }
 
 [class*="cv-btn"][href]:hover,
@@ -22,7 +22,7 @@ button[class*="cv-btn"]:hover {
 }
 
 .cv-btn:focus {
-  outline: solid 2px var(--text);
+  outline: solid 2px rgba(#000, .1);
 }
 
 /* Button colors */
