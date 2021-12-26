@@ -1654,7 +1654,7 @@ hr {
   margin-bottom: 8px;
   outline: 0;
   border: 0;
-  transition: all 0.2s;
+  transition: opacity 0.2s;
 }
 
 [class*=cv-btn][href]:hover,
@@ -1664,7 +1664,7 @@ button[class*=cv-btn]:hover {
 }
 
 .cv-btn:focus {
-  outline: solid 2px var(--text);
+  outline: solid 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Button colors */
@@ -1865,16 +1865,17 @@ button[class*=cv-btn]:hover {
 [class*=alert] {
   background: rgba(var(--light-rgb), 0.3);
   color: var(--text);
-  font-weight: 500;
-  padding: 16px;
   font-size: var(--size-btn);
-  border-left: 3px solid var(--light);
+  font-weight: 500;
+  padding: 24px;
+  border-left: 5px solid var(--light);
+  line-height: 1.75;
 }
 
 .alert-color {
   background: rgba(var(--color-rgb), 0.1);
   color: var(--color);
-  border-left: 3px solid var(--color);
+  border-left-color: var(--color);
 }
 
 /* Component: leads */
@@ -1883,4 +1884,97 @@ button[class*=cv-btn]:hover {
   line-height: 1.7;
   font-size: var(--size-h5);
   opacity: 0.7;
+}
+
+.cv-modal {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 16px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cv-modal:before {
+  content: "✖";
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: 16px;
+  margin-top: 8px;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.cv-modal-content {
+  display: none;
+}
+
+.cv-modal-container {
+  max-width: 700px;
+  border-radius: 4px;
+  max-height: calc(100% - 32px);
+  background: var(--container);
+  color: var(--text);
+  padding: 16px;
+  overflow-y: auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.cv-modal-container.is-compact {
+  max-width: 320px;
+  font-weight: 500;
+}
+
+.cv-modal-container.is-media {
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 32px);
+  max-height: initial;
+  overflow-y: inherit;
+  box-shadow: 0 0 0;
+}
+
+.cv-modal-container.is-media.is-full {
+  max-width: inherit;
+}
+
+.cv-modal img,
+.cv-modal iframe,
+.cv-modal video {
+  border-radius: 4px;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  border: 0;
+  outline: 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+}
+
+.cv-modal iframe,
+.cv-modal video {
+  max-width: 100%;
+  max-height: 100%;
+}
+@media screen and (min-width: 992px) {
+  .cv-modal iframe,
+.cv-modal video {
+    min-width: 720px;
+    min-height: 405px;
+  }
 }
