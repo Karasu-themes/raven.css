@@ -1,7 +1,9 @@
-const { src, dest, watch } = require ('gulp'),
+const { src, dest, watch, series } = require ('gulp'),
   sass = require('gulp-sass')(require('sass')),
   autoprefixer = require('gulp-autoprefixer'),
-  rename = require('gulp-rename');
+  rename = require('gulp-rename'),
+  rollup = require('gulp-better-rollup'),
+  babel = require('@rollup/plugin-babel');
 
 // path
 const path = {
@@ -12,20 +14,36 @@ const path = {
     watch: "./source/scss/**/*.scss"
   },
   // js path
-  js: {}
+  js: {
+    input: {
+      core: "./source/js/raven.core.js",
+    },
+    output: "./dest/js",
+    watch: "./source/js/**/*.js"
+  }
 }
 
 
-function build () {
+function css () {
   return src(path.css["input"])
   .pipe(sass())
   .pipe(autoprefixer())
   .pipe(dest( path.css["output"]) )
 }
 
+function js () {
+  return src(path.js["input"].core)
+  .pipe(rollup({
+    plugins: [babel]
+  }, {
+    format: 'iife',
+    name: "raven"
+  }))
+  .pipe(dest( path.js["output"]) )
+}
 
 // tasks
-exports.build = build;
+exports.build = series(css, js);
 exports.watch = function () {
-  watch(path.css["watch"], build)
+  watch([path.css["watch"], path.js["watch"]], series(css, js))
 }
