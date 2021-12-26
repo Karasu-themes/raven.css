@@ -2,14 +2,15 @@
 [class*="alert"] {
   background: rgba(var(--light-rgb), .3);
   color: var(--text);
-  font-weight: 500;
-  padding: 16px;
   font-size: var(--size-btn);
-  border-left: 3px solid var(--light);
+  font-weight: 500;
+  padding: 24px;
+  border-left: 5px solid var(--light);
+  line-height: 1.75;
 }
 
 .alert-color {
   background: rgba(var(--color-rgb), .1);
   color: var(--color);
-  border-left: 3px solid var(--color);
+  border-left-color: var(--color);
 }
