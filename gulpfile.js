@@ -40,7 +40,7 @@ function js () {
     name: "raven",
     banner: `
 /*!
-* RavenCSS -  v1.1.0
+* RavenCSS -  v1.2.0
 * Copyright 2020 © Karasu themes
 * Developed by Marcelo (github.com/MarceloTLD)
 * MIT License (//github.com/Karasu-themes/karasu/blob/master/LICENSE)
