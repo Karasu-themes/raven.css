@@ -1,0 +1,31 @@
+/* Component: table */
+.table,
+.table table {
+  width: auto;
+  max-width: 100%;
+  color: inherit
+}
+
+.table table {
+  width: 100%;
+  border-collapse: collapse
+}
+
+.table-headline {
+  position: relative;
+  border-bottom: 5px solid var(--light);
+}
+
+.table-headline th:hover:before {
+  opacity: 1
+}
+
+.table-headline th {
+  text-align: left;
+  font-weight: 500;
+  padding: 16px
+}
+
+.table-body td {
+  padding: 16px
+}
