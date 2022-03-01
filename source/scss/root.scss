@@ -1,7 +1,9 @@
 :root {
+  // Typography
   --font-base: #{$fontbase};
   --font-logo: #{$fontlogo};
   --font-head: #{$fonthead};
+  // Colors
   --color: #{$color};
   --color-rgb: #{getRGB($color)};
   --text: #{$text};
@@ -10,6 +12,7 @@
   --light-rgb: #{getRGB($light)};
   --container: #{$container};
   --body: #{$body};
+  // Font sizes
   --size-h1: #{$sizeh1};
   --size-h2: #{$sizeh2};
   --size-h3: #{$sizeh3};
@@ -19,4 +22,7 @@
   --size-base: #{$sizebase};
   --size-btn: #{$sizebtn};
   --size-sub: #{$sizesub};
+  // Layout
+  --layout-container: #{$layout-container};
+  --layout-sidebar: #{$layout-sidebar};
 }
