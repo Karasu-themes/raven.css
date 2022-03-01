@@ -1,0 +1,10 @@
+/* Component: drop caps */
+.drop-caps::first-letter {
+  font-family: Georgia;
+  font-size: calc(var(--size-h1) + 24px);
+  font-weight: 700;
+  float: left;
+  line-height: 0.65;
+  margin-right: 4px;
+  margin-top: 8px;
+}
