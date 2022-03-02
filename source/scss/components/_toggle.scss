@@ -1,0 +1,18 @@
+/*=> Component: toggle/accordion */
+.cv-toggle__trigger,
+.cv-accordion__trigger,
+.cv-bind,
+.cv-bind-remove,
+.cv-bind-close {
+  cursor: pointer;
+}
+
+.cv-toggle__body,
+.cv-accordion__body {
+  display: none;
+}
+
+.cv-toggle__body.is-visible,
+.cv-accordion__body.is-visible {
+  display: block;
+}

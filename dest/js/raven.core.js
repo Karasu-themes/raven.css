@@ -131,9 +131,111 @@ var raven = (function () {
 	  });
 	};
 
+	const toggle = () => {
+	  let el = document.querySelectorAll('.cv-toggle');
+
+	  each(el, (i, toggle) => {
+	    let trigger = toggle.querySelector('.cv-toggle__trigger'), 
+	      body = toggle.querySelector('.cv-toggle__body');
+
+	    if ( body.classList.contains('is-visible') ) {
+	      toggle.classList.add('is-active');
+	    }
+
+	    trigger.addEventListener('click', () => {
+	      body.classList.toggle('is-visible');
+	      toggle.classList.toggle('is-active');
+	    });
+	    
+	  });
+
+	};
+
+	const cleanAll = (arr) => {
+	  each(arr, (i, el) => {
+	    let body = el.querySelector('.cv-accordion__body');
+	    body.classList.remove('is-visible');
+	    el.classList.remove('is-active');
+	  });
+	};
+
+	const accordion = () => {
+	  let el = document.querySelectorAll('.cv-accordion');
+
+	  each(el, (i, accordion) => {
+	    let trigger = accordion.querySelector('.cv-accordion__trigger'), 
+	      body = accordion.querySelector('.cv-accordion__body');
+
+	    if ( body.classList.contains('is-visible') ) {
+	      accordion.classList.add('is-active');
+	    }
+
+	    trigger.addEventListener('click', () => {
+	      if (body.classList.contains('is-visible')) {
+	        body.classList.remove('is-visible');
+	        accordion.classList.remove('is-active');
+	      } else {
+	        cleanAll(el);
+	        body.classList.add('is-visible');
+	        accordion.classList.add('is-active');
+	      }
+
+	    });
+	    
+	  });
+	};
+
+	const validateSelector = (selector) => {
+	  const regExp = /([\.\#][a-z-A-Z-\--\_-\:]*)/g;
+	  return regExp.test(selector) ? true : false
+	};
+
+	const actionBind = (arr, remove) => {
+	  each(arr, (i, bind) => {
+	    let selector = bind.getAttribute('data-bind');
+
+	    if (validateSelector(selector)) {
+	      let element = document.querySelector(selector);
+
+	      if (element) {
+	        bind.addEventListener('click', () => {
+	          if (remove) {
+	            element.classList.remove('cv-bind-is-active');
+	          } else {
+	            if (element.classList.contains('cv-bind-is-active')) {
+	              element.classList.remove('cv-bind-is-active');
+	            } else {
+	              element.classList.add('cv-bind-is-active');
+	            }
+	          }
+	        });
+	      } else {
+	        console.warn(`"Selector" element doesn't exist`);
+	      }
+
+
+	    } else {
+	      console.warn(`"data-bind" value is not a valid selector`);
+	    }
+	  });
+	};
+
+	const bind = () => {
+	  let bindAdd = document.querySelectorAll('.cv-bind'),
+	  bindRemove = document.querySelectorAll('.cv-bind-close');
+
+	  // Add bind
+	  actionBind(bindAdd);
+	  // Remove bind
+	  actionBind(bindRemove, true);
+	};
+
 	var raven_core = (() => {
 	  modal();
 	  tabs();
+	  toggle();
+	  accordion();
+	  bind();
 	})();
 
 	return raven_core;
