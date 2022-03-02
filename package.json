@@ -1,6 +1,6 @@
 {
   "name": "raven.css",
-  "version": "1.2.0",
+  "version": "1.2.5",
   "description": "Lightweight frameworks for build UI web",
   "main": "index.js",
   "scripts": {
