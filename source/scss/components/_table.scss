@@ -1,6 +1,5 @@
 /* Component: table */
-.table,
-.table table {
+.table {
   width: auto;
   max-width: 100%;
   color: inherit
@@ -28,4 +27,10 @@
 
 .table-body td {
   padding: 16px
+}
+
+@media screen and (max-width: $md) {
+  .table {
+    overflow-x: auto;
+  }
 }
