@@ -7,15 +7,15 @@
 
 // Scss variables
 @import './core/variables';
-@import './core/colors';
-@import './core/mixins';
 @import './core/typography';
+@import './core/colors';
+@import './core/functions';
+@import './core/mixins';
 
 /* 
 *=> CSS Variables
 */
 @import './root';
-
 /* 
 *=> Reset
 */
@@ -29,7 +29,6 @@
 @import './utils/margin';
 @import './utils/padding';
 @import './utils/flexbox';
-
 /* 
 *=> Components
 */
