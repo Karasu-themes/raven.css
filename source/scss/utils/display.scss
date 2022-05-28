@@ -3,62 +3,14 @@
 .block {display: block;}
 .inline-block {display: inline-block;}
 .flex {display: flex;}
-.flex-inline {display: inline-flex;}
+.inline-flex {display: inline-flex;}
 .grid {display: grid;}
-.grid-inline {display: inline-grid;}
 .none {display: none;}
 
-@media screen and (min-width: $xs) {
-  .inline\:xs {display: inline;}
-  .block\:xs {display: block;}
-  .inline-block\:xs {display: inline-block;}
-  .flex\:xs {display: flex;}
-  .flex-inline\:xs {display: inline-flex;}
-  .grid\:xs {display: grid;}
-  .grid-inline\:xs {display: inline-grid;}
-  .none\:xs {display: none;}
-}
-
-@media screen and (min-width: $sm) {
-  .inline\:sm {display: inline;}
-  .block\:sm {display: block;}
-  .inline-block\:sm {display: inline-block;}
-  .flex\:sm {display: flex;}
-  .flex-inline\:sm {display: inline-flex;}
-  .grid\:sm {display: grid;}
-  .grid-inline\:sm {display: inline-grid;}
-  .none\:sm {display: none;}
-}
-
-@media screen and (min-width: $md) {
-  .inline\:md {display: inline;}
-  .block\:md {display: block;}
-  .inline-block\:md {display: inline-block;}
-  .flex\:md {display: flex;}
-  .flex-inline\:md {display: inline-flex;}
-  .grid\:md {display: grid;}
-  .grid-inline\:md {display: inline-grid;}
-  .none\:md {display: none;}
-}
-
-@media screen and (min-width: $lg) {
-  .inline\:lg {display: inline;}
-  .block\:lg {display: block;}
-  .inline-block\:lg {display: inline-block;}
-  .flex\:lg {display: flex;}
-  .flex-inline\:lg {display: inline-flex;}
-  .grid\:lg {display: grid;}
-  .grid-inline\:lg {display: inline-grid;}
-  .none\:lg {display: none;}
-}
-
-@media screen and (min-width: $xlg) {
-  .inline\:xlg {display: inline;}
-  .block\:xlg {display: block;}
-  .inline-block\:xlg {display: inline-block;}
-  .flex\:xlg {display: flex;}
-  .flex-inline\:xlg {display: inline-flex;}
-  .grid\:xlg {display: grid;}
-  .grid-inline\:xlg {display: inline-grid;}
-  .none\:xlg {display: none;}
-}
+.inline {@include queryClass {display: inline;}}
+.block {@include queryClass {display: block;}}
+.inline-block {@include queryClass {display: inline-block;}}
+.flex {@include queryClass {display: flex;}}
+.inline-flex {@include queryClass {display: inline-flex;}}
+.grid {@include queryClass {display: grid;}}
+.none {@include queryClass {display: none;}}

@@ -1,76 +1,17 @@
 /* utils: padding */
+@each $name, $value in $spacing {
+  .p#{$name} {padding: #{$value};}
+  .p#{$name}-t {padding-top: #{$value};}
+  .p#{$name}-r {padding-right: #{$value};}
+  .p#{$name}-b {padding-bottom: #{$value};}
+  .p#{$name}-l {padding-left: #{$value};}
+  .p#{$name}-x {
+    padding-left: #{$value};
+    padding-right: #{$value};
+  }
 
-.p-0,
-.p-reset {padding: 0;}
-.p-auto {padding: auto;}
-.p-auto-x {padding-left: auto;padding-right: auto;}
-.p-auto-y {padding-top: auto;padding-top: auto;}
-
-.p4 {padding: 4px;}
-.p8 {padding: 8px;}
-.p16 {padding: 16px;}
-.p24 {padding: 24px;}
-.p32 {padding: 32px;}
-.p36 {padding: 36px;}
-.p42 {padding: 42px;}
-.p48 {padding: 48px;}
-
-.p4-x {padding-left: 4px;padding-right: 4px;}
-.p8-x {padding-left: 8px;padding-right: 8px;}
-.p16-x {padding-left: 16px;padding-right: 16px;}
-.p24-x {padding-left: 24px;padding-right: 24px;}
-.p32-x {padding-left: 32px;padding-right: 32px;}
-.p36-x {padding-left: 36px;padding-right: 36px;}
-.p42-x {padding-left: 42px;padding-right: 42px;}
-.p48-x {padding-left: 48px;padding-right: 48px;}
-
-
-.p4-y {padding-top: 4px;padding-bottom: 4px;}
-.p8-y {padding-top: 8px;padding-bottom: 8px;}
-.p16-y {padding-top: 16px;padding-bottom: 16px;}
-.p24-y {padding-top: 24px;padding-bottom: 24px;}
-.p32-y {padding-top: 32px;padding-bottom: 32px;}
-.p36-y {padding-top: 36px;padding-bottom: 36px;}
-.p42-y {padding-top: 42px;padding-bottom: 42px;}
-.p48-y {padding-top: 48px;padding-bottom: 48px;}
-
-
-.p4-l {padding-left: 4px;}
-.p8-l {padding-left: 8px;}
-.p16-l {padding-left: 16px;}
-.p24-l {padding-left: 24px;}
-.p32-l {padding-left: 32px;}
-.p36-l {padding-left: 36px;}
-.p42-l {padding-left: 42px;}
-.p48-l {padding-left: 48px;}
-
-
-.p4-t {padding-top: 4px;}
-.p8-t {padding-top: 8px;}
-.p16-t {padding-top: 16px;}
-.p24-t {padding-top: 24px;}
-.p32-t {padding-top: 32px;}
-.p36-t {padding-top: 36px;}
-.p42-t {padding-top: 42px;}
-.p48-t {padding-top: 48px;}
-
-
-.p4-r {padding-right: 4px;}
-.p8-r {padding-right: 8px;}
-.p16-r {padding-right: 16px;}
-.p24-r {padding-right: 24px;}
-.p32-r {padding-right: 32px;}
-.p36-r {padding-right: 36px;}
-.p42-r {padding-right: 42px;}
-.p48-r {padding-right: 48px;}
-.p48-t {padding-top: 48px;}
-
-
-.p4-b {padding-bottom: 4px;}
-.p8-b {padding-bottom: 8px;}
-.p16-b {padding-bottom: 16px;}
-.p24-b {padding-bottom: 24px;}
-.p32-b {padding-bottom: 32px;}
-.p36-b {padding-bottom: 36px;}
-.p42-b {padding-bottom: 42px;}
-.p48-b {padding-bottom: 48px;}
+  .p#{$name}-y {
+    padding-top: #{$value};
+    padding-bottom: #{$value};
+  }
+}

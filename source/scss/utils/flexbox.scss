@@ -15,119 +15,45 @@
 .items-baseline {align-items: baseline;}
 .items-stretch {align-items: stretch;}
 
+/* Flex wrap */
+.wrap {flex-wrap: wrap;}
+.wrap-reverse {flex-wrap: wrap-reverse;}
+.nowrap {flex-wrap: nowrap;}
+
+/* Flex grow */
+.grow-0 {flex-grow: 0;}
+.grow-1 {flex-grow: 1;}
+
 /* Flex direction */
-.dir-row {flex-direction: row;}
-.dir-column {flex-direction: column;}
-.dir-row-reverse {flex-direction: row-reverse;}
-.dir-column-reverse {flex-direction: column-reverse;}
+.row {flex-direction: row;}
+.column {flex-direction: column;}
+.row-reverse {flex-direction: row-reverse;}
+.column-reverse {flex-direction: column-reverse;}
 
-/* Flex responsive */
-@media screen and (min-width: $xs) {
-  .content-start\:xs {justify-content: flex-start}
-  .content-center\:xs {justify-content: center}
-  .content-end\:xs {justify-content: flex-end}
-  .content-around\:xs {justify-content: space-around}
-  .content-between\:xs {justify-content: space-between}
-  .content-evenly\:xs {justify-content: space-evenly}
-  .content-stretch\:xs {justify-content: stretch}
-  .content-revert\:xs {justify-content: revert}
+/* Responsive */
+.content-start {@include queryClass {justify-content: flex-start}}
+.content-center {@include queryClass {justify-content: center}}
+.content-end {@include queryClass {justify-content: flex-end}}
+.content-around {@include queryClass {justify-content: space-around}}
+.content-between {@include queryClass {justify-content: space-between}}
+.content-evenly {@include queryClass {justify-content: space-evenly}}
+.content-stretch {@include queryClass {justify-content: stretch}}
+.content-revert {@include queryClass {justify-content: revert}}
 
-  .items-start\:xs {align-items: flex-start;}
-  .items-center\:xs {align-items: center;}
-  .items-end\:xs {align-items: flex-end;}
-  .items-baseline\:xs {align-items: baseline;}
-  .items-stretch\:xs {align-items: stretch;}
+.items-start {@include queryClass {align-items: flex-start;}}
+.items-center {@include queryClass {align-items: center;}}
+.items-end {@include queryClass {align-items: flex-end;}}
+.items-baseline {@include queryClass {align-items: baseline;}}
+.items-stretch {@include queryClass {align-items: stretch;}}
 
-  .dir-row\:xs {flex-direction: row;}
-  .dir-column\:xs {flex-direction: column;}
-  .dir-row-reverse\:xs {flex-direction: row-reverse;}
-  .dir-column-reverse\:xs {flex-direction: column-reverse;}
-}
+.wrap {@include queryClass {flex-wrap: wrap;}}
+.wrap-reverse {@include queryClass {flex-wrap: wrap-reverse;}}
+.nowrap {@include queryClass {flex-wrap: nowrap;}}
 
-@media screen and (min-width: $sm) {
-  .content-start\:sm {justify-content: flex-start}
-  .content-center\:sm {justify-content: center}
-  .content-end\:sm {justify-content: flex-end}
-  .content-around\:sm {justify-content: space-around}
-  .content-between\:sm {justify-content: space-between}
-  .content-evenly\:sm {justify-content: space-evenly}
-  .content-stretch\:sm {justify-content: stretch}
-  .content-revert\:sm {justify-content: revert}
+.grow-0 {@include queryClass {flex-grow: 0;}}
+.grow-1 {@include queryClass {flex-grow: 1;}}
 
-  .items-start\:sm {align-items: flex-start;}
-  .items-center\:sm {align-items: center;}
-  .items-end\:sm {align-items: flex-end;}
-  .items-baseline\:sm {align-items: baseline;}
-  .items-stretch\:sm {align-items: stretch;}
-
-  .dir-row\:sm {flex-direction: row;}
-  .dir-column\:sm {flex-direction: column;}
-  .dir-row-reverse\:sm {flex-direction: row-reverse;}
-  .dir-column-reverse\:sm {flex-direction: column-reverse;}
-}
-
-@media screen and (min-width: $md) {
-  .content-start\:md {justify-content: flex-start}
-  .content-center\:md {justify-content: center}
-  .content-end\:md {justify-content: flex-end}
-  .content-around\:md {justify-content: space-around}
-  .content-between\:md {justify-content: space-between}
-  .content-evenly\:md {justify-content: space-evenly}
-  .content-stretch\:md {justify-content: stretch}
-  .content-revert\:md {justify-content: revert}
-
-  .items-start\:md {align-items: flex-start;}
-  .items-center\:md {align-items: center;}
-  .items-end\:md {align-items: flex-end;}
-  .items-baseline\:md {align-items: baseline;}
-  .items-stretch\:md {align-items: stretch;}
-
-  .dir-row\:md {flex-direction: row;}
-  .dir-column\:md {flex-direction: column;}
-  .dir-row-reverse\:md {flex-direction: row-reverse;}
-  .dir-column-reverse\:md {flex-direction: column-reverse;}
-}
-
-@media screen and (min-width: $lg) {
-  .content-start\:lg {justify-content: flex-start}
-  .content-center\:lg {justify-content: center}
-  .content-end\:lg {justify-content: flex-end}
-  .content-around\:lg {justify-content: space-around}
-  .content-between\:lg {justify-content: space-between}
-  .content-evenly\:lg {justify-content: space-evenly}
-  .content-stretch\:lg {justify-content: stretch}
-  .content-revert\:lg {justify-content: revert}
-
-  .items-start\:lg {align-items: flex-start;}
-  .items-center\:lg {align-items: center;}
-  .items-end\:lg {align-items: flex-end;}
-  .items-baseline\:lg {align-items: baseline;}
-  .items-stretch\:lg {align-items: stretch;}
-
-  .dir-row\:lg {flex-direction: row;}
-  .dir-column\:lg {flex-direction: column;}
-  .dir-row-reverse\:lg {flex-direction: row-reverse;}
-  .dir-column-reverse\:lg {flex-direction: column-reverse;}
-}
-
-@media screen and (min-width: $xlg) {
-  .content-start\:xlg {justify-content: flex-start}
-  .content-center\:xlg {justify-content: center}
-  .content-end\:xlg {justify-content: flex-end}
-  .content-around\:xlg {justify-content: space-around}
-  .content-between\:xlg {justify-content: space-between}
-  .content-evenly\:xlg {justify-content: space-evenly}
-  .content-stretch\:xlg {justify-content: stretch}
-  .content-revert\:xlg {justify-content: revert}
-
-  .items-start\:xlg {align-items: flex-start;}
-  .items-center\:xlg {align-items: center;}
-  .items-end\:xlg {align-items: flex-end;}
-  .items-baseline\:xlg {align-items: baseline;}
-  .items-stretch\:xlg {align-items: stretch;}
-
-  .dir-row\:xlg {flex-direction: row;}
-  .dir-column\:xlg {flex-direction: column;}
-  .dir-row-reverse\:xlg {flex-direction: row-reverse;}
-  .dir-column-reverse\:xlg {flex-direction: column-reverse;}
-}
+.row {@include queryClass {flex-direction: row;}}
+.column {@include queryClass {flex-direction: column;}}
+.row-reverse {@include queryClass {flex-direction: row-reverse;}}
+.column-reverse {@include queryClass {flex-direction: column-reverse;}}
