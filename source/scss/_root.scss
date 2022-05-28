@@ -2,7 +2,6 @@
   // Typography
   --font-base: #{$fontbase};
   --font-logo: #{$fontlogo};
-  --font-head: #{$fonthead};
   // Colors
   --color: #{$color};
   --color-rgb: #{getRGB($color)};
@@ -10,8 +9,8 @@
   --text-rgb: #{getRGB($text)};
   --light: #{$light};
   --light-rgb: #{getRGB($light)};
-  --container: #{$container};
-  --body: #{$body};
+  --color-body: #{$body};
+  --color-wrapper: #{$wrapper};
   // Font sizes
   --size-h1: #{$sizeh1};
   --size-h2: #{$sizeh2};

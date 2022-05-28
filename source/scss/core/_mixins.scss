@@ -1,3 +1,11 @@
-@function getRGB($color) {
-  @return  #{ red($color) + "," + green($color) + "," + blue($color) };
+@mixin queryClass ( $bp: $breakpoint ) {
+  @at-root {
+    @each $name, $value in $bp {
+      @media screen and (min-width: #{$value}) {
+        &\:#{$name} {
+          @content;
+        }
+      }
+    }
+  }
 }
